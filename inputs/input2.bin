@@ -1,0 +1,6 @@
+
+int somefunction()
+{
+    printf("Function\n");
+    return 0;
+}

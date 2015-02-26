@@ -1,0 +1,30 @@
+Minimal test case of a CMake problem.
+
+The problem is that the custom commands run twice for some files.
+Here is some example output:
+
+-- The C compiler identification is GNU 4.8.2
+-- The CXX compiler identification is GNU 4.8.2
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+Input files: /home/user/src/tests/cmake_cust_commands/inputs/input1.bin;/home/user/src/tests/cmake_cust_commands/inputs/input2.bin
+Converted files: /tmp/test/converted/input1.converted;/tmp/test/converted/input2.converted
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/test
+[ 20%] Creating compiled output dir: /tmp/test/converted
+[ 40%] Generating converted/input2.converted
+[ 60%] Generating converted/input1.converted
+[ 80%] Generating main.c
+Scanning dependencies of target test
+[ 80%] Generating converted/input2.converted
+[ 80%] Generating main.c
+[100%] Building C object CMakeFiles/test.dir/main.c.o
+Linking C executable test
+[100%] Built target test
